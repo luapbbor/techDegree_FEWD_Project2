@@ -1,5 +1,117 @@
 body {
-    background-color: greenyellow;
-    border: 0;
-    padding: 0;
+    font-family: 'Petrona', sans-serif;
+     box-sizing: border-box; 
 }
+
+nav {
+    background-color: #ede8e5;
+    color: #52504f;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #52504f;
+}
+
+
+h1 {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    font-family: 'Junge', sans-serif;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+text-align: center;
+font-size: 1.2rem;
+}
+
+/* Responsive images */
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
+.clearFix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ============================== Media Queries ============================== */
+
+/* ================  Phone ================ */
+
+  @media (min-width: 320px) {
+    .wrapper {
+        width: 80%;
+        margin: auto;
+    }
+    
+    ul {
+        text-align: center;
+        margin-bottom: 20px;
+        padding: 0 0 10px;
+    }
+    
+    li {
+        text-align: center;
+        padding: 10px 0;
+        margin: 5px 10px;
+        background-color: white;
+    }
+
+    img {
+        width: 80%;
+        margin: 0 10%;
+        padding: 0;
+       }
+
+    .skillsListItem {
+        background-color:  #52504f;
+        padding: 5px;
+        margin: 2px;
+        color: white;
+    }
+
+    h2 {
+        padding-top: 40px;
+    }
+
+    footer nav {
+        background-color: white;
+    }
+
+    footer nav ul {
+        width: 90%;
+        margin: auto;
+        border-top: 1px solid #52504f;
+    }
+
+    #footerTitle {
+        float: left;
+        padding-top: 10px;
+    }
+
+    #backToTop {
+        float: right;
+    }
+
+    .toggleListItem {
+        display: none;
+    }
+
+    
+   
+  }
