@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Junga|Petrona">
+    <!-- 
+        Was getting a validation error for having the pipe symbol in the google fonts URL when trying to bring in multiple fonts.
+        Found on stack overflow that you have to use the character entity "%7c;"
+        https://stackoverflow.com/questions/22466913/google-fonts-url-break-html5-validation-on-w3-org
+        credit: steveax
+     -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Junga%7C;Petrona">
 
     
     <title>Mobile First Responsive Layout</title>
 </head>
 <body>
-    <div class="wrapper">
-        <header>
+    <div class="wrapper" >
+        <header id="top">
             <nav class="main-nav clearFix">
                 <h1>Paul Robb</h1>  
             <ul>
@@ -89,7 +95,8 @@
             <nav class="mobile-footer-nav">
                 <ul>
                     <li><h3 id="footerTitle">Paul Robb</h3>  </li>
-                    <li id="backToTop"><a href="index.html">Back to top</a></li>
+                    <li id="backToTop"><a href="#top">Back to top</a></li>
+                </ul>
             </nav>
             <nav class="main-footer-nav clearFix">
             <ul >
