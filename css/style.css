@@ -1,6 +1,7 @@
 body {
     font-family: 'Petrona', sans-serif;
      box-sizing: border-box; 
+     background-image: linear-gradient( #ede8e5, #c7ff9f);
 }
 
 nav {
@@ -14,11 +15,17 @@ ul {
 
 a {
     text-decoration: none;
-    text-transform: uppercase;
     font-weight: bold;
     color: #52504f;
 }
 
+a, h2 {
+    text-transform: uppercase;
+}
+
+a:hover {
+    color:#3fa820;
+}
 
 h1 {
     text-align: center;
@@ -28,7 +35,7 @@ h1 {
 
 }
 
-h2 {
+h2, h3 {
     text-align: center;
 }
 
@@ -64,12 +71,16 @@ img {
         margin-bottom: 20px;
         padding: 0 0 10px;
     }
-    
-    li {
+
+    ul li {
+        background-color: white;
         text-align: center;
         padding: 10px 0;
         margin: 5px 10px;
-        background-color: white;
+    }
+    
+    footer nav ul li, .contactSection ul li {
+        background-color: #c7ff9f;
     }
 
     img {
@@ -89,8 +100,8 @@ img {
         padding-top: 40px;
     }
 
-    footer nav {
-        background-color: white;
+    footer nav, footer nav li ul {
+        background-color:#c7ff9f;
     }
 
     footer nav ul {
@@ -99,6 +110,7 @@ img {
         border-top: 1px solid #52504f;
     }
 
+
     #footerTitle {
         float: left;
         padding-top: 10px;
@@ -106,12 +118,84 @@ img {
 
     #backToTop {
         float: right;
+     
     }
 
     .toggleListItem {
         display: none;
     }
 
+  }
+
+  /* ================  tablet ================ */
+
+  @media (min-width: 768px ) {
+      
+    nav ul li {
+        display: inline-block;
+        background-color: #ede8e5;
+    }
+
+    .wrapper {
+        width: 90%;
+        margin: auto;
+    }
+
+    .intro img {
+        max-width: 30%;
+        height: auto;
+        margin: 0;
+        float: right;
+        padding: 20px 0 0 0;
+    }
+
+    .intro p {
+        width: 68%;
+        float: left;
+        text-align: left;
+       }
+
+    .col {
+        width: 45%;
+        float: left;
+    }
+
+    /* ================  
+    https://stackoverflow.com/questions/3462298/select-every-nth-element-in-css
+    credit: "boltClock"    
+    ================ */
+    .col:nth-child(2n) {
+        float: right;
+    }
+
+    .skillsListItem {
+        display: inline;
+        border-radius: 5px;
+        padding: 5px 20px;
+    }
+
+    #backToTop {
+        display: none;
+    }
+
+  #footerTitle {
+      float: none;
+      padding: 0;
+  }
+
+  footer nav ul {
+      padding: 20px 0 60px 0;
+  }
+
+  .toggleListItem:first-child {
+      margin-right: 40%;
+  }
+
+    .toggleListItem {
+        display: inline-block;
+        margin: 0;
+        padding: 0 5px 0;
     
-   
+    }
+
   }
